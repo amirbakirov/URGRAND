@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридическая фирма «ГРАНД»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Placeholder-шрифты — заменить на фирменные файлы -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== PRELOADER ========== -->
+    <div id="preloader" class="preloader">
+        <div class="preloader__logo">ГРАНД</div>
+        <div class="preloader__bar"><span></span></div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="header__inner container">
+            <a href="/" class="header__logo">ГРАНД</a>
+
+            <nav class="header__nav" id="mainNav">
+                <ul>
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#about">О нашей работе</a></li>
+                    <li><a href="#practices">Практики</a></li>
+                    <li><a href="#industries">Отрасли</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#team">Команда</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__right">
+                <!-- Социальные сети -->
+                <div class="header__socials">
+                    <a href="https://vk.com/" target="_blank" class="social-icon social-icon--vk" aria-label="ВКонтакте">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C5.058 10.501 4.56 8.316 4.56 7.886c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.743c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.15-3.574 2.15-3.574.118-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.745-.576.745z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon social-icon--tg" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                </div>
+
+                <!-- Кнопка обратного звонка -->
+                <a href="tel:+79063211157" class="header__phone">+7 (906) 32-11-57</a>
+                <button class="btn-callback" id="btnCallback" aria-label="Получить консультацию">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </button>
+            </div>
+
+            <!-- Hamburger для мобильных -->
+            <button class="header__burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__inner">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть">✕</button>
+            <nav>
+                <ul>
+                    <li><a href="#hero" class="mobile-link">Главная</a></li>
+                    <li><a href="#about" class="mobile-link">О нашей работе</a></li>
+                    <li><a href="#practices" class="mobile-link">Практики</a></li>
+                    <li><a href="#industries" class="mobile-link">Отрасли</a></li>
+                    <li><a href="#services" class="mobile-link">Услуги</a></li>
+                    <li><a href="#team" class="mobile-link">Команда</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn--white mobile-menu__cta" id="mobileBtnCallback">Получить консультацию</button>
+            <a href="tel:+79063211157" class="mobile-menu__phone">+7 (906) 32-11-57</a>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero__bg"></div>
+            <div class="container hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">Современные юридические<br>решения для вашего бизнеса</h1>
+                    <p class="hero__desc">
+                        Юридическая фирма «ГРАНД» обеспечивает устойчивость бизнеса клиентов за счёт точных
+                        правовых решений и выверенной стратегии защиты.<br>
+                        Мы внедряем современные юридические инструменты, берём на себя риски и доводим задачи до
+                        измеримого результата — снижения потерь, сохранения активов и защиты интересов в спорах.
+                    </p>
+                    <button class="btn btn--light" id="heroBtnCallback">Получить консультацию</button>
+                </div>
+            </div>
+
+            <!-- Якорные ссылки внизу hero -->
+            <div class="hero__anchors">
+                <a href="#practices" class="hero__anchor">Ключевые направления защиты бизнеса</a>
+                <a href="#industries" class="hero__anchor">Отрасли нашей юридической работы</a>
+                <a href="#services" class="hero__anchor">Услуги для вашего бизнеса</a>
+            </div>
+        </section>
+
+        <!-- ========== О НАШЕЙ РАБОТЕ ========== -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="about__title section-title">О нашей работе</h2>
+
+                <div class="about__body">
+                    <!-- Блоки статистики -->
+                    <div class="about__stats">
+                        <div class="stat-card">
+                            <span class="stat-card__num">7 лет</span>
+                            <span class="stat-card__desc">практики в юридическом сопровождении бизнеса</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card__num">500+</span>
+                            <span class="stat-card__desc">доведены до успешного результата</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card__num">90%</span>
+                            <span class="stat-card__desc">выигранных судебных споров</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card__num">150+</span>
+                            <span class="stat-card__desc">клиентов на постоянном обслуживании</span>
+                        </div>
+                    </div>
+
+                    <!-- Текст справа -->
+                    <div class="about__side-text">
+                        <p>Каждый наш специалист имеет профильное образование и многолетний успешный опыт в своей области права</p>
+                    </div>
+                </div>
+
+                <!-- Разделитель с точкой -->
+                <div class="about__divider">
+                    <div class="about__divider-line"></div>
+                    <div class="about__divider-dot"></div>
+                    <div class="about__divider-line about__divider-line--right"></div>
+                </div>
+
+                <!-- Нижний текст -->
+                <div class="about__bottom">
+                    <div class="about__bottom-text">
+                        <p>Мы нацелены на достижение конкретного положительного результата для вас, а не на затягивание процесса</p>
+                    </div>
+                    <a href="#about" class="about__arrow" aria-label="Далее">
+                        <svg viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 8H38M38 8L31 1M38 8L31 15" stroke="#1a2744" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ОТРАСЛИ ========== -->
+        <section class="industries" id="industries">
+            <div class="industries__grid-bg"></div>
+            <div class="container industries__inner">
+                <div class="industries__left">
+                    <h2 class="section-title industries__title">Отрасли нашей работы</h2>
+                    <p class="industries__desc">
+                        Мы оказываем юридическую помощь в ключевых отраслях права — от корпоративных
+                        и налоговых вопросов до судебных споров и защиты активов. Обеспечиваем
+                        комплексное сопровождение с учётом специфики бизнеса, судебной практики и
+                        требований законодательства, доводя каждое дело до результата.
+                    </p>
+                    <!-- Фото здания -->
+                    <div class="industries__img-wrap">
+                        <div class="industries__img-placeholder"></div>
+                    </div>
+                </div>
+
+                <div class="industries__right">
+                    <!-- Декоративный 3D-куб -->
+                    <div class="industries__deco-cube"></div>
+
+                    <ol class="industries__list">
+                        <li class="industries__item">
+                            <span class="industries__name">Девелопмент</span>
+                            <span class="industries__num">01</span>
+                        </li>
+                        <li class="industries__item">
+                            <span class="industries__name">Инвестиции</span>
+                            <span class="industries__num">02</span>
+                        </li>
+                        <li class="industries__item">
+                            <span class="industries__name">Информационные технологии</span>
+                            <span class="industries__num">03</span>
+                        </li>
+                        <li class="industries__item">
+                            <span class="industries__name">Агропромышленный комплекс</span>
+                            <span class="industries__num">04</span>
+                        </li>
+                        <li class="industries__item">
+                            <span class="industries__name">Электронная коммерция (e-commerce)</span>
+                            <span class="industries__num">05</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ПРАКТИКИ ========== -->
+        <section class="practices" id="practices">
+            <div class="container">
+                <h2 class="section-title practices__title">Ключевые направления практик</h2>
+
+                <div class="practices__grid">
+                    <!-- Карточка 1 — тёмная -->
+                    <div class="practice-card practice-card--dark practice-card--tall">
+                        <h3 class="practice-card__title">ИНТЕЛЛЕКТУАЛЬНАЯ СОБСТВЕННОСТЬ</h3>
+                        <p class="practice-card__text">
+                            С развитием научно-технического прогресса наиболее ценным ресурсом является
+                            интеллектуальные возможности и плоды созидательной деятельности человека...
+                        </p>
+                    </div>
+
+                    <!-- Карточка 2 — светлая -->
+                    <div class="practice-card practice-card--light">
+                        <h3 class="practice-card__title">СУДЕБНО-АРБИТРАЖНАЯ ПРАКТИКА</h3>
+                        <p class="practice-card__text">
+                            Ключевой задачей бизнеса и частных лиц является сохранение имеющихся активов.
+                            Именно для этого участники гражданского оборота используют свои ресурсы...
+                        </p>
+                    </div>
+
+                    <!-- Карточка 3 — светлая с фото -->
+                    <div class="practice-card practice-card--light practice-card--with-img">
+                        <h3 class="practice-card__title">СОПРОВОЖДЕНИЕ СДЕЛОК СЛИЯНИЯ И ПОГЛОЩЕНИЯ</h3>
+                        <p class="practice-card__text">
+                            Комплекс юридических и корпоративных процедур, направленных на приобретение
+                            бизнеса, объединение компаний или перераспределение корпоративного контроля,
+                            требующих точной правовой структуры и контроля рисков на каждом этапе сделки.
+                        </p>
+                        <div class="practice-card__img"></div>
+                    </div>
+
+                    <!-- Карточка 4 — светлая -->
+                    <div class="practice-card practice-card--light">
+                        <h3 class="practice-card__title">НЕДВИЖИМОСТЬ И СТРОИТЕЛЬСТВО</h3>
+                        <p class="practice-card__text">
+                            Проекты в сфере эксплуатации недвижимости и строительства реализуются как
+                            самостоятельно, так и с помощью привлечения инвестиций...
+                        </p>
+                    </div>
+
+                    <!-- Карточка 5 — тёмная -->
+                    <div class="practice-card practice-card--dark">
+                        <h3 class="practice-card__title">КОРПОРАТИВНОЕ СОПРОВОЖДЕНИЕ</h3>
+                        <p class="practice-card__text">
+                            Участие в коммерческой деятельности, как правило, сопровождается привлечением
+                            капитала и созданием на его основе обществ, с предоставлением участникам деятельности...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== УСЛУГИ ========== -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services__header">
+                    <h2 class="section-title services__title">Услуги для<br>вашего бизнеса</h2>
+                </div>
+
+                <div class="services__body">
+                    <div class="services__cards">
+                        <div class="service-card">
+                            <h3 class="service-card__title">ЗАЩИТА ОТ СУБСИДИАРНОЙ ОТВЕТСТВЕННОСТИ</h3>
+                            <p class="service-card__text">Комплексная защита руководителей и собственников бизнеса от привлечения к субсидиарной ответственности при банкротстве.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-card__title">ВЗЫСКАНИЕ ДЕБИТОРСКОЙ ЗАДОЛЖЕННОСТИ</h3>
+                            <p class="service-card__text">Профессиональное взыскание дебиторской задолженности в досудебном и судебном порядке.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-card__title">НАЛОГОВЫЕ СПОРЫ И ПРОВЕРКИ</h3>
+                            <p class="service-card__text">Сопровождение налоговых проверок, обжалование решений налоговых органов, защита в суде.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3 class="service-card__title">ЛИЗИНГОВЫЕ СПОРЫ И САЛЬДО</h3>
+                            <p class="service-card__text">Разрешение споров по лизинговым договорам, расчёт сальдо встречных обязательств.</p>
+                        </div>
+                    </div>
+
+                    <div class="services__feature">
+                        <div class="services__doc-img"></div>
+                        <div class="services__bankruptcy">
+                            <span>ПРОЦЕДУРА БАНКРОТСТВА</span>
+                        </div>
+                        <div class="services__deco-shapes">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+
+            <!-- Левая колонка: логотип + контакты -->
+            <div class="footer__brand">
+                <a href="/" class="footer__logo">ГРАНД</a>
+                <p class="footer__company-name">ЭПБ ГРАНД</p>
+                <p class="footer__ogr">ОГРН: 1231600049999</p>
+
+                <address class="footer__address">
+                    г. Казань, Ю. Фучика 90,<br>БЦ Франт
+                </address>
+
+                <div class="footer__contacts">
+                    <a href="tel:+79063211157" class="footer__phone">+7 (906) 321-11-57</a>
+                    <a href="mailto:info@urgrand.ru" class="footer__email">info@urgrand.ru</a>
+                </div>
+
+                <div class="footer__socials">
+                    <a href="https://vk.com/" target="_blank" class="footer__social-icon" aria-label="ВКонтакте">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C5.058 10.501 4.56 8.316 4.56 7.886c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.743c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.15-3.574 2.15-3.574.118-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.745-.576.745z"/></svg>
+                    </a>
+                    <a href="#" class="footer__social-icon" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Правая часть: навигационные колонки -->
+            <nav class="footer__nav">
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-heading">
+                        <a href="#industries">Отрасли</a>
+                    </h4>
+                    <ul>
+                        <li><a href="#industries">Девелопмент</a></li>
+                        <li><a href="#industries">Инвестиции</a></li>
+                        <li><a href="#industries">Информационные технологии</a></li>
+                        <li><a href="#industries">Агропромышленный комплекс</a></li>
+                        <li><a href="#industries">Электронная коммерция (e-commerce)</a></li>
+                    </ul>
+                    <h4 class="footer__nav-heading footer__nav-heading--mt">
+                        <a href="#about">О компании</a>
+                    </h4>
+                </div>
+
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-heading">
+                        <a href="#practices">Практики</a>
+                    </h4>
+                    <ul>
+                        <li><a href="#practices">Интеллектуальная собственность</a></li>
+                        <li><a href="#practices">Судебно-арбитражная практика</a></li>
+                        <li><a href="#practices">Недвижимость и строительство</a></li>
+                        <li><a href="#practices">Банкротство</a></li>
+                        <li><a href="#practices">Защита деловой репутации</a></li>
+                    </ul>
+                    <h4 class="footer__nav-heading footer__nav-heading--mt">
+                        <a href="#blog">Блог</a>
+                    </h4>
+                </div>
+
+                <div class="footer__nav-col">
+                    <h4 class="footer__nav-heading">
+                        <a href="#services">Услуги</a>
+                    </h4>
+                    <ul>
+                        <li><a href="#services">Экспертиза</a></li>
+                        <li><a href="#services">Курсы</a></li>
+                    </ul>
+                    <h4 class="footer__nav-heading footer__nav-heading--mt">
+                        <a href="#contacts">Контакты</a>
+                    </h4>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Нижняя полоса футера -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <span class="footer__copy">© 2024 ЭПБ ГРАНД. Все права защищены.</span>
+                <a href="#" class="footer__policy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== МОДАЛ: ФОРМА ОБРАТНОГО ЗВОНКА ========== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">✕</button>
+            <h2 class="modal__title" id="modalTitle">Получить консультацию</h2>
+            <p class="modal__subtitle">Оставьте заявку, и наши юристы оперативно свяжутся с вами</p>
+
+            <form class="modal__form" id="callbackForm" novalidate>
+                <div class="form-group">
+                    <input type="text" id="fieldFirstName" name="firstName" placeholder="Имя" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="fieldLastName" name="lastName" placeholder="Фамилия" required autocomplete="family-name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="fieldMiddleName" name="middleName" placeholder="Отчество" required autocomplete="additional-name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="fieldPhone" name="phone" placeholder="+7 (___) ___ __-__" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="fieldEmail" name="email" placeholder="Email" required autocomplete="email">
+                </div>
+
+                <p class="modal__policy">
+                    Оставляя заявку, вы принимаете
+                    <a href="#">политику обработки персональных данных</a>
+                </p>
+
+                <button type="submit" class="btn btn--dark btn--full" id="submitBtn" disabled>
+                    Отправить заявку
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== МОДАЛ: БЛАГОДАРНОСТЬ ========== -->
+    <div class="modal-overlay" id="thankYouOverlay" role="dialog" aria-modal="true">
+        <div class="modal modal--thanks">
+            <button class="modal__close" id="thankYouClose" aria-label="Закрыть">✕</button>
+            <div class="modal__thanks-icon">
+                <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="29" stroke="#1a3a5c" stroke-width="2"/><path d="M18 30l9 9 15-18" stroke="#1a3a5c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="modal__title">Спасибо за заявку!</h2>
+            <p class="modal__subtitle">Наши юристы свяжутся с вами в ближайшее время.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
