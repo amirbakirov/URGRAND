@@ -163,13 +163,9 @@ address { font-style: normal; }
     justify-content: center;
     transition: opacity var(--t), transform var(--t);
 }
-.header__social svg { width: 18px; height: 18px; }
+.header__social--vk svg { width: 18px; height: 18px; }
 .header__social--vk {
     background: #0077ff;
-    color: #fff;
-}
-.header__social--max {
-    background: #ff6600;
     color: #fff;
 }
 .header__social:hover { opacity: .85; transform: scale(1.05); }
