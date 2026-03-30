@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГРАНД — Юридическая фирма</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Placeholder-шрифты — заменить на фирменные файлы позже -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========================================================
+     PRELOADER
+     ======================================================== -->
+<div id="preloader" class="preloader">
+    <div class="preloader__inner">
+        <img src="images/small_logo.jpg" alt="ГРАНД" class="preloader__logo">
+        <div class="preloader__line"><span class="preloader__fill"></span></div>
+        <span class="preloader__label">Юридическая фирма</span>
+    </div>
+</div>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+<header class="header" id="header">
+    <div class="header__inner">
+
+        <!-- Логотип -->
+        <a href="/" class="header__logo">
+            <img src="images/small_logo.jpg" alt="ГРАНД">
+        </a>
+
+        <!-- Навигация (ссылки на страницы) -->
+        <nav class="header__nav" id="mainNav">
+            <a href="/" class="header__link active">Главная</a>
+            <a href="/uslugi.html" class="header__link">Услуги</a>
+            <a href="/praktiki.html" class="header__link">Практики</a>
+            <a href="/otrasli.html" class="header__link">Отрасли</a>
+            <a href="/komanda.html" class="header__link">Команда</a>
+        </nav>
+
+        <!-- Правая группа -->
+        <div class="header__right">
+            <!-- ВКонтакте -->
+            <a href="https://vk.com/urgrand" target="_blank" rel="noopener" class="header__social header__social--vk" aria-label="ВКонтакте">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C5.058 10.501 4.56 8.316 4.56 7.886c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.743c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.15-3.574 2.15-3.574.118-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.745-.576.745z"/>
+                </svg>
+            </a>
+            <!-- Max (VK Max / Одноклассники Max) -->
+            <a href="#" class="header__social header__social--max" aria-label="Max">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 1.932.563 2.684a.5.5 0 0 1-.724.538L13.5 12l-2.263 1.375a.5.5 0 0 1-.724-.538l.563-2.684L9.106 8.22a.5.5 0 0 1 .277-.852l2.72-.394L13.24 4.6a.5.5 0 0 1 .896 0l1.137 2.374 2.72.394a.5.5 0 0 1 .277.853h-.376z"/>
+                </svg>
+            </a>
+            <!-- Кнопка Контакты -->
+            <a href="/kontakty.html" class="header__contacts-btn">Контакты</a>
+        </div>
+
+        <!-- Hamburger (мобильные) -->
+        <button class="header__burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-label="Навигация">
+    <button class="mob-menu__close" id="mobMenuClose" aria-label="Закрыть">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l16 16M18 2L2 18"/></svg>
+    </button>
+    <nav class="mob-menu__nav">
+        <a href="/" class="mob-menu__link">Главная</a>
+        <a href="/uslugi.html" class="mob-menu__link">Услуги</a>
+        <a href="/praktiki.html" class="mob-menu__link">Практики</a>
+        <a href="/otrasli.html" class="mob-menu__link">Отрасли</a>
+        <a href="/komanda.html" class="mob-menu__link">Команда</a>
+        <a href="/kontakty.html" class="mob-menu__link mob-menu__link--cta">Контакты</a>
+    </nav>
+    <div class="mob-menu__footer">
+        <a href="tel:+79063211157">+7 (906) 321-11-57</a>
+    </div>
+</div>
+
+<!-- ========================================================
+     MAIN CONTENT
+     ======================================================== -->
+<main>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 1 — HERO
+     ───────────────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+    <div class="hero__inner">
+
+        <!-- Левая колонка — иллюстрация -->
+        <div class="hero__media">
+            <!-- Заглушка. Изображение будет добавлено позже -->
+            <div class="hero__img-placeholder">
+                <img src="images/Main/chess.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Правая колонка — текст -->
+        <div class="hero__text">
+            <p class="hero__desc">
+                Юридическая фирма «ГРАНД» оказывает услуги в ключевых направлениях,
+                связанных с защитой бизнеса, активов и финансовых интересов. Мы не
+                ограничиваемся формальным сопровождением — в каждом проекте
+                выстраивается чёткая стратегия, направленная на достижение конкретного
+                результата.
+            </p>
+        </div>
+    </div>
+
+    <!-- Бегущая строка -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker__track" id="tickerTrack">
+            <!-- Первый набор (дублируется JS-ом) -->
+            <div class="ticker__item">
+                <span>Экспертно-правовое бюро</span>
+                <span class="ticker__sep">\</span>
+                <span>Экспертно-правовое бюро</span>
+                <span class="ticker__sep">\</span>
+                <!-- <span>Защита бизнеса</span>
+                <span class="ticker__sep">\</span>
+                <span>Корпоративное право</span>
+                <span class="ticker__sep">\</span>
+                <span>Арбитраж</span>
+                <span class="ticker__sep">\</span>
+                <span>Налоговые споры</span>
+                <span class="ticker__sep">\</span>
+                <span>Банкротство</span>
+                <span class="ticker__sep">\</span> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 2 — «БЕРЁМ СИТУАЦИЮ ПОД КОНТРОЛЬ» (статистика)
+     ───────────────────────────────────────────────────────── -->
+<section class="stats-section" id="about">
+    <div class="stats-section__top">
+        <h2 class="stats-section__title">Берём&nbsp; ситуацию под контроль</h2>
+        <p class="stats-section__desc">
+            Юридическая фирма «ГРАНД» специализируется на корпоративных и коммерческих делах, где важен
+            не процесс, а результат. Мы формируем чёткую правовую позицию, выстраиваем стратегию и
+            доводим дело до решения — в переговорах или в суде.
+        </p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stats-col">
+            <div class="stats-col__head">
+                <span class="stats-col__arrow">↗</span>
+                <span class="stats-col__num">150</span>
+            </div>
+            <p class="stats-col__label">клиентов работают с нами на постоянной основе</p>
+            <div class="stats-col__img">
+                <img src="images/Main/img-1.jpg" alt="150 клиентов">
+            </div>
+        </div>
+
+        <div class="stats-col">
+            <div class="stats-col__head">
+                <span class="stats-col__arrow">↗</span>
+                <span class="stats-col__num">10 лет</span>
+            </div>
+            <p class="stats-col__label">практики в арбитражных и корпоративных спорах</p>
+            <div class="stats-col__img">
+                <img src="images/Main/img-2.jpg" alt="10 лет практики">
+            </div>
+        </div>
+
+        <div class="stats-col">
+            <div class="stats-col__head">
+                <span class="stats-col__arrow">↗</span>
+                <span class="stats-col__num">&gt;500</span>
+            </div>
+            <p class="stats-col__label">успешно завершённых судебных дел в интересах наших клиентов</p>
+            <div class="stats-col__img">
+                <img src="images/Main/img-3.jpg" alt=">500 дел">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 3 — КЛЮЧЕВЫЕ ПРАКТИКИ (6 карточек)
+     ───────────────────────────────────────────────────────── -->
+<section class="practices-section" id="practices">
+    <div class="practices-section__header">
+        <h2 class="practices-section__title">Ключевые практики защиты и<br>сопровождения бизнеса</h2>
+    </div>
+
+    <div class="practices-grid">
+        <!-- Карточка 1 -->
+        <a href="/praktiki.html#sudebnaya" class="pcard" style="--bg: url('../images/Main/img-4.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Судебно-арбитражная практика</h3>
+                <p class="pcard__text">Ключевой задачей бизнеса и частных лиц является сохранение имеющихся...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+        <!-- Карточка 2 -->
+        <a href="/praktiki.html#intellekt" class="pcard" style="--bg: url('../images/Main/img-5.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Интеллектуальная собственность</h3>
+                <p class="pcard__text">В случае применения указанных ресурсов в промышленности...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+        <!-- Карточка 3 -->
+        <a href="/praktiki.html#nedvizhimost" class="pcard" style="--bg: url('../images/Main/img-6.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Недвижимость и строительство</h3>
+                <p class="pcard__text">Для профессионального разрешения вопросов, возникающих в сфере...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+        <!-- Карточка 4 -->
+        <a href="/praktiki.html#korporativ" class="pcard" style="--bg: url('../images/Main/img-7.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Корпоративное сопровождение</h3>
+                <p class="pcard__text">Участие в коммерческой деятельности, как правило, сопровождается...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+        <!-- Карточка 5 -->
+        <a href="/praktiki.html#reputaciya" class="pcard" style="--bg: url('../images/Main/img-8.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Защита деловой репутации</h3>
+                <p class="pcard__text">Как правило, именно репутация является основополагающим...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+        <!-- Карточка 6 -->
+        <a href="/praktiki.html#sdelki" class="pcard" style="--bg: url('../images/Main/img-9.jpg')">
+            <div class="pcard__overlay"></div>
+            <div class="pcard__body">
+                <h3 class="pcard__title">Сопровождение сделок слияния и поглощения</h3>
+                <p class="pcard__text">Мы сопровождаем сделки покупки, продажи и объединения компаний...</p>
+            </div>
+            <span class="pcard__arrow">↗</span>
+        </a>
+    </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 4 — УСЛУГИ (5 карточек)
+     ───────────────────────────────────────────────────────── -->
+<section class="services-section" id="services">
+    <div class="services-section__header">
+        <h2 class="services-section__title">Берём&nbsp; ситуацию под контроль</h2>
+        <p class="services-section__desc">
+            Работаем со сложными категориями споров: от защиты от субсидиарной ответственности и налоговых претензий до
+            взыскания проблемной задолженности и урегулирования лизинговых конфликтов. В каждом случае фокус — на снижении
+            рисков, сохранении активов и финансовом результате клиента.
+        </p>
+    </div>
+
+    <div class="services-grid">
+        <!-- 2x2 малых карточки -->
+        <a href="/uslugi.html#subsidiarnaya" class="scard scard--small" style="--bg: url('../images/Main/img-11.jpg')">
+            <div class="scard__overlay"></div>
+            <div class="scard__body">
+                <h3 class="scard__title">Защита от субсидиарной ответственности</h3>
+            </div>
+            <span class="scard__arrow">↗</span>
+        </a>
+        <a href="/uslugi.html#nalog" class="scard scard--small" style="--bg: url('../images/Main/img-14.jpg')">
+            <div class="scard__overlay"></div>
+            <div class="scard__body">
+                <h3 class="scard__title">Налоговые споры и проверки</h3>
+            </div>
+            <span class="scard__arrow">↗</span>
+        </a>
+        <a href="/uslugi.html#debitor" class="scard scard--small" style="--bg: url('../images/Main/img-12.jpg')">
+            <div class="scard__overlay"></div>
+            <div class="scard__body">
+                <h3 class="scard__title">Взыскание дебиторской задолженности</h3>
+            </div>
+            <span class="scard__arrow">↗</span>
+        </a>
+        <a href="/uslugi.html#lizing" class="scard scard--small" style="--bg: url('../images/Main/img-13.jpg')">
+            <div class="scard__overlay"></div>
+            <div class="scard__body">
+                <h3 class="scard__title">Лизинговые споры и сальдо</h3>
+            </div>
+            <span class="scard__arrow">↗</span>
+        </a>
+
+        <!-- Большая карточка (банкротство) -->
+        <a href="/uslugi.html#bankrotstvo" class="scard scard--large" style="--bg: url('../images/Main/img-10.jpg')">
+            <div class="scard__overlay"></div>
+            <div class="scard__body">
+                <h3 class="scard__title scard__title--large">Сопровождение процедуры банкротства</h3>
+            </div>
+            <span class="scard__arrow">↗</span>
+        </a>
+    </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 5 — ОТРАСЛИ (правовое сопровождение)
+     ───────────────────────────────────────────────────────── -->
+<section class="industries-section" id="industries">
+    <div class="industries-section__inner">
+
+        <!-- Левая панель — тёмная с изображением и заголовком -->
+        <div class="industries-left">
+            <div class="industries-left__bg" style="background-image: url('images/Main/img-15.jpg')"></div>
+            <div class="industries-left__overlay"></div>
+            <h2 class="industries-left__title">Правовое сопровождение отраслевых проектов</h2>
+        </div>
+
+        <!-- Правая панель — нумерованный список -->
+        <div class="industries-right">
+            <ul class="industries-list">
+                <li class="industries-list__item">
+                    <div class="industries-list__left">
+                        <span class="industries-list__num">01</span>
+                        <span class="industries-list__name">Девелопмент</span>
+                    </div>
+                    <span class="industries-list__dash">—</span>
+                    <p class="industries-list__desc">Одним из ключевых принципов работы нашей фирмы является постоянное и многостороннее взаимодействие с заказчиками для обеспечения успешной...</p>
+                </li>
+                <li class="industries-list__item">
+                    <div class="industries-list__left">
+                        <span class="industries-list__num">02</span>
+                        <span class="industries-list__name">Инвестиции</span>
+                    </div>
+                    <span class="industries-list__dash">—</span>
+                    <p class="industries-list__desc">Мы гарантируем инвесторам, правообладателям и акционерам необходимую профессиональную помощь, гарантию конфиденциальности и обеспечение...</p>
+                </li>
+                <li class="industries-list__item">
+                    <div class="industries-list__left">
+                        <span class="industries-list__num">03</span>
+                        <span class="industries-list__name">Информационные технологии</span>
+                    </div>
+                    <span class="industries-list__dash">—</span>
+                    <p class="industries-list__desc">Наша команда осуществляет постоянную поддержку проектов в сфере информационных технологий для обеспечения защиты интересов компаний...</p>
+                </li>
+                <li class="industries-list__item">
+                    <div class="industries-list__left">
+                        <span class="industries-list__num">04</span>
+                        <span class="industries-list__name">Электронная коммерция</span>
+                    </div>
+                    <span class="industries-list__dash">—</span>
+                    <p class="industries-list__desc">Наша компания не просто оказывает услуги по подготовке договора, а напрямую решает проблемы клиента, следуя высоким стандартам правовой этики.</p>
+                </li>
+                <li class="industries-list__item">
+                    <div class="industries-list__left">
+                        <span class="industries-list__num">05</span>
+                        <span class="industries-list__name">Агропромышленный комплекс</span>
+                    </div>
+                    <span class="industries-list__dash">—</span>
+                    <p class="industries-list__desc">Мы гарантированно соблюдаем политику конфиденциальности и сроки выполнения работ, поскольку нам дорога наша репутация. Работая с нами...</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     СЕКЦИЯ 6 — КОНТАКТЫ / ФОРМА
+     ───────────────────────────────────────────────────────── -->
+<section class="contact-section" id="contact">
+    <div class="contact-section__inner">
+
+        <!-- Заголовок -->
+        <div class="contact-section__header">
+            <h2 class="contact-section__title">Необходима консультация?</h2>
+            <p class="contact-section__sub">Оставьте заявку, и наши юристы оперативно свяжутся с вами для первичной консультации.</p>
+        </div>
+
+        <div class="contact-section__body">
+
+            <!-- Левая часть — телефон с логотипом -->
+            <div class="contact-phone-wrap">
+                <!-- Иконки-пузыри -->
+                <div class="phone-bubble phone-bubble--lg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+                </div>
+                <div class="phone-bubble phone-bubble--sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+                </div>
+
+                <!-- Телефон с логотипом внутри экрана -->
+                <div class="phone-mockup">
+                    <img src="images/Main/img-16.jpg" alt="ГРАНД на телефоне" class="phone-mockup__img">
+                    <div class="phone-mockup__screen">
+                        <img src="images/big_logo.jpg" alt="ГРАНД — Юридическая фирма" class="phone-mockup__logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая часть — тёмная карточка с формой -->
+            <div class="contact-form-card">
+                <h3 class="contact-form-card__title">Не знаете, как<br>защитить свои права?</h3>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="contact-form__field">
+                        <input type="text" id="cfName" name="name" placeholder="ИМЯ" required autocomplete="given-name">
+                    </div>
+                    <div class="contact-form__field">
+                        <input type="tel" id="cfPhone" name="phone" placeholder="ТЕЛЕФОН" required autocomplete="tel">
+                    </div>
+                    <p class="contact-form__hint">Сомневаетесь в правильности действий?</p>
+                    <button type="submit" class="contact-form__submit" id="cfSubmit">
+                        Получить консультацию
+                        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h14M11 4l6 6-6 6"/></svg>
+                    </button>
+                </form>
+
+                <p class="contact-form__policy">
+                    Нажимая кнопку, вы соглашаетесь с
+                    <a href="/policy.html">политикой конфиденциальности</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main><!-- /main -->
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="footer">
+    <div class="footer__inner">
+
+        <!-- Бренд-колонка -->
+        <div class="footer__brand">
+            <a href="/" class="footer__logo">
+                <img src="images/small_logo.jpg" alt="ГРАНД">
+            </a>
+            <p class="footer__company">ЭПБ ГРАНД</p>
+            <p class="footer__ogr">ОГРН: 1231600049999</p>
+
+            <address class="footer__address">
+                г. Казань, Ю. Фучика 90,<br>БЦ Франт
+            </address>
+
+            <div class="footer__contacts">
+                <a href="tel:+79063211157" class="footer__tel">+7 (906) 321-11-57</a>
+                <a href="mailto:info@urgrand.ru" class="footer__email">info@urgrand.ru</a>
+            </div>
+
+            <div class="footer__socials">
+                <a href="https://vk.com/urgrand" target="_blank" rel="noopener" class="footer__soc-btn" aria-label="ВКонтакте">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C5.058 10.501 4.56 8.316 4.56 7.886c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.743c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.15-3.574 2.15-3.574.118-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.491-.085.745-.576.745z"/></svg>
+                </a>
+                <a href="#" class="footer__soc-btn" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Навигационные колонки -->
+        <nav class="footer__nav" aria-label="Навигация в футере">
+            <div class="footer__col">
+                <h4 class="footer__col-head"><a href="/otrasli.html">Отрасли</a></h4>
+                <ul>
+                    <li><a href="/otrasli.html#development">Девелопмент</a></li>
+                    <li><a href="/otrasli.html#investicii">Инвестиции</a></li>
+                    <li><a href="/otrasli.html#it">Информационные технологии</a></li>
+                    <li><a href="/otrasli.html#agro">Агропромышленный комплекс</a></li>
+                    <li><a href="/otrasli.html#ecommerce">Электронная коммерция (e-commerce)</a></li>
+                </ul>
+                <h4 class="footer__col-head footer__col-head--gap"><a href="/o-kompanii.html">О компании</a></h4>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__col-head"><a href="/praktiki.html">Практики</a></h4>
+                <ul>
+                    <li><a href="/praktiki.html#intellekt">Интеллектуальная собственность</a></li>
+                    <li><a href="/praktiki.html#sudebnaya">Судебно-арбитражная практика</a></li>
+                    <li><a href="/praktiki.html#nedvizhimost">Недвижимость и строительство</a></li>
+                    <li><a href="/praktiki.html#bankrotstvo">Банкротство</a></li>
+                    <li><a href="/praktiki.html#reputaciya">Защита деловой репутации</a></li>
+                </ul>
+                <h4 class="footer__col-head footer__col-head--gap"><a href="/blog.html">Блог</a></h4>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__col-head"><a href="/uslugi.html">Услуги</a></h4>
+                <ul>
+                    <li><a href="/uslugi.html#ekspertiza">Экспертиза</a></li>
+                    <li><a href="/uslugi.html#kursy">Курсы</a></li>
+                </ul>
+                <h4 class="footer__col-head footer__col-head--gap"><a href="/kontakty.html">Контакты</a></h4>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Нижняя полоса -->
+    <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+            <span>© 2024 ЭПБ ГРАНД. Все права защищены.</span>
+            <a href="/policy.html">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ========================================================
+     МОДАЛ — СПАСИБО
+     ======================================================== -->
+<div class="modal-thanks" id="modalThanks" role="dialog" aria-modal="true" aria-labelledby="thanksTitle">
+    <div class="modal-thanks__box">
+        <button class="modal-thanks__close" id="modalThanksClose" aria-label="Закрыть">✕</button>
+        <div class="modal-thanks__icon">
+            <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="29" stroke="#1a3a5c" stroke-width="2"/>
+                <path d="M18 30l9 9 15-18" stroke="#1a3a5c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 id="thanksTitle">Заявка принята!</h2>
+        <p>Наши юристы свяжутся с вами в ближайшее время.</p>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
